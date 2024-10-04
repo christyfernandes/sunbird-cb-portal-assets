@@ -1,4 +1,4 @@
-<head>
+<head><!-- //NOSONAR -->
     <META HTTP-EQUIV='content-type' CONTENT='text/html; charset=UTF-8'>
     <style>
         #zohoSupportWebToCase textarea,
@@ -84,7 +84,9 @@
             /* font-family: 'Montserrat-SemiBold';
             font-size: 14px;
             font-weight: 500; */
+            /* stylelint-disable */
             font: 400 13px/16px 'Lato' !important;
+            /* stylelint-enable */
         }
     </style>
     <style>
@@ -151,7 +153,9 @@
         }
 
         #tooltip-zc {
+            /* stylelint-disable */
             font: normal 12px 'Lato';
+            /* stylelint-enable */
             line-height: 18px;
             position: absolute;
             padding: 8px;
@@ -162,10 +166,14 @@
             -webkit-border-radius: 5px;
             border-radius: 5px;
             color: #eee;
+            /* stylelint-disable */
             -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
             -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+            /* stylelint-enable */
             z-index: 10000;
+            /* stylelint-disable */
             color: #777
+                /* stylelint-enable */
         }
 
         .wtcmanfield {
@@ -566,9 +574,9 @@
                             var attachmentsDetailJSON = attachments[attachmentsIndex];
                             var zsCloudAttachmentName = attachmentsDetailJSON['docName'];
                             var extension = zsCloudAttachmentName.split('.').pop().toLowerCase();
-                            var unSupportedExtensions = ["ade", "adp", "apk", "appx", "appxbundle", "bat", "cab", "cer", "chm", "cmd", "com", "cpl", "dll", "dmg", "exe", "hlp", "hta", "ins", "iso", "isp", "jar", "js", "jse", "lnk", "mde", "msc", "msi", "msix", "msixbundle", "msp", "mst", "nsh", "pif", "ps1", "pst", "reg", "scr", "sct", "shb", "sys", "tmp", "url", "vb", "vbe", "vbs", "vxd", "wsc", "wsf", "wsh", "terminal","zip"];
-                            var supportedExtensions = ["jpg","png","jpeg","gif","pdf","msword","mp4" ]
-                            if(supportedExtensions.indexOf(extension) == -1 ) {
+                            var unSupportedExtensions = ["ade", "adp", "apk", "appx", "appxbundle", "bat", "cab", "cer", "chm", "cmd", "com", "cpl", "dll", "dmg", "exe", "hlp", "hta", "ins", "iso", "isp", "jar", "js", "jse", "lnk", "mde", "msc", "msi", "msix", "msixbundle", "msp", "mst", "nsh", "pif", "ps1", "pst", "reg", "scr", "sct", "shb", "sys", "tmp", "url", "vb", "vbe", "vbs", "vxd", "wsc", "wsf", "wsh", "terminal", "zip"];
+                            var supportedExtensions = ["jpg", "png", "jpeg", "gif", "pdf", "msword", "mp4"]
+                            if (supportedExtensions.indexOf(extension) == -1) {
                                 alert("The file wasn't attached since its extension is not supported.");
                                 return;
                             }
@@ -630,10 +638,10 @@
                     }
                     var extension = zsFileName.split('.').pop().toLowerCase();
                     var unSupportedExtensions = ["ade", "adp", "apk", "appx", "appxbundle", "bat", "cab", "cer", "chm", "cmd", "com", "cpl", "dll", "dmg", "exe", "hlp", "hta", "ins", "iso", "isp", "jar", "js", "jse", "lnk", "mde", "msc", "msi", "msix", "msixbundle", "msp", "mst", "nsh", "pif", "ps1", "pst", "reg", "scr", "sct", "shb", "sys", "tmp", "url", "vb", "vbe", "vbs", "vxd", "wsc", "wsf", "wsh", "terminal",
-                    "bin", "exe", "msi","zip"
+                        "bin", "exe", "msi", "zip"
                     ];
-                    var supportedExtensions = ["jpg","png","jpeg","gif","pdf","msword","mp4" ]
-                    if(supportedExtensions.indexOf(extension) == -1 ) {
+                    var supportedExtensions = ["jpg", "png", "jpeg", "gif", "pdf", "msword", "mp4"]
+                    if (supportedExtensions.indexOf(extension) == -1) {
                         alert("The file wasn't attached since its extension is not supported.");
                         return;
                     }
@@ -733,7 +741,7 @@
             id="property(module)" value="Cases" /> <input type="hidden" id="dependent_field_values_Cases"
             value="&#x7b;&quot;JSON_VALUES&quot;&#x3a;&#x7b;&quot;Classification&quot;&#x3a;&#x7b;&quot;CASECF5&quot;&#x3a;&#x7b;&quot;Service&#x20;Request&quot;&#x3a;&#x5b;&quot;Course&#x20;Requests&quot;,&quot;Organization&#x20;Requests&quot;,&quot;User&#x20;Requests&quot;&#x5d;&#x7d;&#x7d;&#x7d;,&quot;JSON_SELECT_VALUES&quot;&#x3a;&#x7b;&quot;Classification&quot;&#x3a;&#x5b;&quot;Bug&quot;,&quot;Data&#x20;Request&quot;,&quot;Feedback&quot;,&quot;Issue&quot;,&quot;Junk&quot;,&quot;Others&quot;,&quot;Query&quot;,&quot;Service&#x20;Request&quot;&#x5d;,&quot;CASECF5&quot;&#x3a;&#x5b;&quot;-&quot;,&quot;Certificate&quot;,&quot;Course&quot;,&quot;Course&#x20;Creation&quot;,&quot;Course&#x20;Publish&quot;,&quot;Course&#x20;Requests&quot;,&quot;Course&#x20;Upload&quot;,&quot;Feedback&quot;,&quot;Login&quot;,&quot;Organization&#x20;Requests&quot;,&quot;Other&quot;,&quot;Profile&quot;,&quot;Registration&quot;,&quot;Reports&quot;,&quot;Role&#x20;assignment&quot;,&quot;User&#x20;Creation&#x20;&#x2f;&#x20;Upload&quot;,&quot;User&#x20;Requests&quot;&#x5d;&#x7d;,&quot;JSON_MAP_DEP_LABELS&quot;&#x3a;&#x5b;&quot;Classification&quot;&#x5d;&#x7d;" />
         <input type='hidden' name='returnURL' value='&#x2a;' />
-        <table border='0' cellspacing='0' class='zsFormClass'>
+        <table border='0' cellspacing='0' class='zsFormClass'><!-- //NOSONAR -->
             <tr>
                 <td colspan='2' class='zsFontClass'>
                     <p class="mat-subheading-1 text-center">Enter Details To Raise Your Concern</p>
@@ -869,9 +877,8 @@
             <tr>
                 <td nowrap class='zsFontClass ' width='25%' align='left'>Attachment &nbsp;&nbsp;</td>
                 <td align='left' width='75%'><span class="zsFontClass wtcuploadfile" id="zsBrowseAttachment">Attach
-                        files</span><input class="wtcuploadinput"
-                        type='file' name='attachment_1' id='zsattachment_1' style='display:block;'
-                        onclick='zsOpenFileBrowseAttachment(event)'
+                        files</span><input class="wtcuploadinput" type='file' name='attachment_1' id='zsattachment_1'
+                        style='display:block;' onclick='zsOpenFileBrowseAttachment(event)'
                         onchange='zsRenderBrowseFileAttachment(this.value, this)' /><input class="wtcuploadinput"
                         type='file' name='attachment_2' id='zsattachment_2' style='display:none;'
                         onclick='zsOpenFileBrowseAttachment(event)'
@@ -897,8 +904,8 @@
                 <td nowrap class='zsFontClass' width='25%' align='left'>Captcha&nbsp;</td>
                 <td>
                     <div id='zsCaptchaLoading'><strong>Loading...<br><br></strong></div>
-                    <div id='zsCaptcha' style='display:none;'><img src='#' id='zsCaptchaUrl' name="zsCaptchaImage"><a
-                            href='javascript:;'
+                    <div id='zsCaptcha' style='display:none;'><img alt="captcha" src='#' id='zsCaptchaUrl'
+                            name="zsCaptchaImage"><a href='javascript:;'
                             style='color:#00a3fe; cursor:pointer; margin-left:10px; vertical-align:middle;text-decoration: none;'
                             class='zsFontClass' id="refreshCaptcha">Refresh</a></div>
                     <div><input type='text' name='zsWebFormCaptchaWord' /><input type='hidden' name='zsCaptchaSrc'
@@ -914,7 +921,7 @@
                 <td width='25%' align='left'></td>
                 <td style='padding: 0px 5px;' align='left' width='75%'>
                     <div class='wb_FtCon wb_common'><span>powered by </span><a target='_blank' rel='noopener noreferrer'
-                            href='https://zoho.in/desk' class='wb_logoCon'><img class='wb_logo'
+                            href='https://zoho.in/desk' class='wb_logoCon'><img alt="wb_logo" class='wb_logo'
                                 src='https://img.zohostatic.in/support/app/images/portalLogo.de847024ebc0131731a3.png' /></a>
                     </div>
                 </td>

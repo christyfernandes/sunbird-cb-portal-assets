@@ -3,7 +3,8 @@
 Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
 -->
-<html>
+<html xml:lang>
+
 <head>
 	<meta charset="utf-8">
 	<title>Data Filtering &mdash; CKEditor Sample</title>
@@ -14,12 +15,15 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
 		CKEDITOR.config.removeDialogTabs = 'image:advanced;link:advanced;flash:advanced;creatediv:advanced;editdiv:advanced';
 	</script>
 </head>
+
 <body>
 	<h1 class="samples">
 		<a href="index.html">CKEditor Samples</a> &raquo; Data Filtering and Features Activation
 	</h1>
 	<div class="warning deprecated">
-		This sample is not maintained anymore. Check out its <a href="https://ckeditor.com/docs/ckeditor4/latest/examples/acf.html">brand new version in CKEditor Examples</a>.
+		This sample is not maintained anymore. Check out its <a
+			href="https://ckeditor.com/docs/ckeditor4/latest/examples/acf.html">brand new version in CKEditor
+			Examples</a>.
 	</div>
 	<div class="description">
 		<p>
@@ -35,7 +39,7 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
 			It process both HTML that is inserted manually (i.e. pasted by the user)
 			and programmatically like:
 		</p>
-<pre class="samples">
+		<pre class="samples">
 editor.setData( '&lt;p&gt;Hello world!&lt;/p&gt;' );
 </pre>
 		<p>
@@ -57,7 +61,8 @@ editor.setData( '&lt;p&gt;Hello world!&lt;/p&gt;' );
 			Advanced Content Filter is enabled by default, working in "automatic mode", yet
 			it provides a set of easy rules that allow adjusting filtering rules
 			and disabling the entire feature when necessary. The config property
-			responsible for this feature is <code><a class="samples"
+			responsible for this feature is
+			<code><a class="samples"
 			href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-allowedContent">config.allowedContent</a></code>.
 		</p>
 		<p>
@@ -73,13 +78,13 @@ editor.setData( '&lt;p&gt;Hello world!&lt;/p&gt;' );
 		</p>
 		<p>
 			Let's assume our intention is to restrict the editor to accept (produce) <strong>paragraphs
-			only: no attributes, no styles, no other tags</strong>.
+				only: no attributes, no styles, no other tags</strong>.
 			With <abbr title="Advanced Content Filter">ACF</abbr>
 			this is very simple. Basically set <code><a class="samples"
 			href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-allowedContent">
 			config.allowedContent</a></code> to <code>'p'</code>:
 		</p>
-<pre class="samples">
+		<pre class="samples">
 var editor = CKEDITOR.replace( <em>textarea_id</em>, {
 	<strong>allowedContent: 'p'</strong>
 } );
@@ -87,7 +92,7 @@ var editor = CKEDITOR.replace( <em>textarea_id</em>, {
 		<p>
 			Now try to play with allowed content:
 		</p>
-<pre class="samples">
+		<pre class="samples">
 // Trying to insert disallowed tag and attribute.
 editor.setData( '&lt;p <strong>style="color: red"</strong>&gt;Hello <strong>&lt;em&gt;world&lt;/em&gt;</strong>!&lt;/p&gt;' );
 alert( editor.getData() );
@@ -104,7 +109,8 @@ alert( editor.getData() );
 		<p>
 			This is just a small sample of what <abbr title="Advanced Content Filter">ACF</abbr>
 			can do. To know more, please refer to the sample section below and
-			<a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_advanced_content_filter.html">the official Advanced Content Filter guide</a>.
+			<a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_advanced_content_filter.html">the official
+				Advanced Content Filter guide</a>.
 		</p>
 		<p>
 			You may, of course, want CKEditor to avoid filtering of any kind.
@@ -113,7 +119,7 @@ alert( editor.getData() );
 			href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-allowedContent">
 			config.allowedContent</a></code> to <code>true</code> like this:
 		</p>
-<pre class="samples">
+		<pre class="samples">
 CKEDITOR.replace( <em>textarea_id</em>, {
 	<strong>allowedContent: true</strong>
 } );
@@ -146,7 +152,7 @@ CKEDITOR.replace( <em>textarea_id</em>, {
 		<p>
 			There are several editor instances below that present different
 			<abbr title="Advanced Content Filter">ACF</abbr> setups. <strong>All of them,
-			except the inline instance, share the same HTML content</strong> to visualize
+				except the inline instance, share the same HTML content</strong> to visualize
 			how different filtering rules affect the same input data.
 		</p>
 	</div>
@@ -171,7 +177,7 @@ CKEDITOR.replace( <em>textarea_id</em>, {
 
 		<script>
 
-			CKEDITOR.replace( 'editor1' );
+			CKEDITOR.replace('editor1');
 
 		</script>
 	</div>
@@ -187,7 +193,7 @@ CKEDITOR.replace( <em>textarea_id</em>, {
 				This editor is using a custom configuration for
 				<abbr title="Advanced Content Filter">ACF</abbr>:
 			</p>
-<pre class="samples">
+			<pre class="samples">
 CKEDITOR.replace( 'editor2', {
 	allowedContent:
 		'h1 h2 h3 p blockquote strong em;' +
@@ -239,7 +245,7 @@ CKEDITOR.replace( 'editor2', {
 			</ul>
 			<p>
 				Please note that <strong><abbr title="User Interface">UI</abbr> of the
-				editor is different</strong>. It's a response to what happened to the filters.
+					editor is different</strong>. It's a response to what happened to the filters.
 				Since <code>text-align</code> isn't allowed, the align toolbar is gone.
 				The same thing happened to subscript/superscript, strike, underline
 				(<code>&lt;u&gt;</code>, <code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code>
@@ -253,7 +259,7 @@ CKEDITOR.replace( 'editor2', {
 		</textarea>
 		<script>
 
-			CKEDITOR.replace( 'editor2', {
+			CKEDITOR.replace('editor2', {
 				allowedContent:
 					'h1 h2 h3 p blockquote strong em;' +
 					'a[!href];' +
@@ -263,7 +269,7 @@ CKEDITOR.replace( 'editor2', {
 					'span{!color};' +
 					'span(!marker);' +
 					'del ins'
-			} );
+			});
 
 		</script>
 	</div>
@@ -281,7 +287,7 @@ CKEDITOR.replace( 'editor2', {
 				Note that filters can be configured as an object literal
 				as an alternative to a string-based definition.
 			</p>
-<pre class="samples">
+			<pre class="samples">
 CKEDITOR.replace( 'editor3', {
 	allowedContent: {
 		'b i ul ol big small': true,
@@ -303,7 +309,7 @@ CKEDITOR.replace( 'editor3', {
 		</textarea>
 		<script>
 
-			CKEDITOR.replace( 'editor3', {
+			CKEDITOR.replace('editor3', {
 				allowedContent: {
 					'b i ul ol big small': true,
 					'h1 h2 h3 p blockquote li': {
@@ -316,7 +322,7 @@ CKEDITOR.replace( 'editor3', {
 						classes: 'left,right'
 					}
 				}
-			} );
+			});
 
 		</script>
 	</div>
@@ -331,7 +337,7 @@ CKEDITOR.replace( 'editor3', {
 			<p>
 				This editor is using a custom set of plugins and buttons.
 			</p>
-<pre class="samples">
+			<pre class="samples">
 CKEDITOR.replace( 'editor4', {
 	removePlugins: 'bidi,font,forms,flash,horizontalrule,iframe,justify,table,tabletools,smiley',
 	removeButtons: 'Anchor,Underline,Strike,Subscript,Superscript,Image',
@@ -346,7 +352,7 @@ CKEDITOR.replace( 'editor4', {
 				of <code>removeButtons: 'Image'</code>). The conclusion is that
 				<abbr title="Advanced Content Filter">ACF</abbr> works "backwards"
 				as well: <strong>modifying <abbr title="User Interface">UI</abbr>
-				elements is changing allowed content rules</strong>.
+					elements is changing allowed content rules</strong>.
 			</p>
 		</div>
 		<textarea cols="80" id="editor4" name="editor4" rows="10">
@@ -354,11 +360,11 @@ CKEDITOR.replace( 'editor4', {
 		</textarea>
 		<script>
 
-			CKEDITOR.replace( 'editor4', {
+			CKEDITOR.replace('editor4', {
 				removePlugins: 'bidi,div,font,forms,flash,horizontalrule,iframe,justify,table,tabletools,smiley',
 				removeButtons: 'Anchor,Underline,Strike,Subscript,Superscript,Image',
 				format_tags: 'p;h1;h2;h3;pre;address'
-			} );
+			});
 
 		</script>
 	</div>
@@ -386,7 +392,10 @@ CKEDITOR.replace( 'editor4', {
 			</p>
 		</div>
 		<h1 id="editor5" contenteditable="true">
-			<em>Apollo 11</em> was the spaceflight that landed the first humans, Americans <a href="http://en.wikipedia.org/wiki/Neil_Armstrong" title="Neil Armstrong">Neil Armstrong</a> and <a href="http://en.wikipedia.org/wiki/Buzz_Aldrin" title="Buzz Aldrin">Buzz Aldrin</a>, on the Moon on July 20, 1969, at 20:18 UTC.
+			<em>Apollo 11</em> was the spaceflight that landed the first humans, Americans <a
+				href="http://en.wikipedia.org/wiki/Neil_Armstrong" title="Neil Armstrong">Neil Armstrong</a> and <a
+				href="http://en.wikipedia.org/wiki/Buzz_Aldrin" title="Buzz Aldrin">Buzz Aldrin</a>, on the Moon on July
+			20, 1969, at 20:18 UTC.
 		</h1>
 	</div>
 
@@ -399,11 +408,12 @@ CKEDITOR.replace( 'editor4', {
 		<div class="description">
 			<p>
 				This editor is using a custom configuration for <abbr title="Advanced Content Filter">ACF</abbr>.
-				It's using the <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_disallowed_content.html" rel="noopener noreferrer" target="_blank">
-				Disallowed Content</a> property of the filter to eliminate all <code>title</code> attributes.
+				It's using the <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_disallowed_content.html"
+					rel="noopener noreferrer" target="_blank">
+					Disallowed Content</a> property of the filter to eliminate all <code>title</code> attributes.
 			</p>
 
-<pre class="samples">
+			<pre class="samples">
 CKEDITOR.replace( 'editor6', {
 	allowedContent: {
 		'b i ul ol big small': true,
@@ -426,13 +436,13 @@ CKEDITOR.replace( 'editor6', {
 		</textarea>
 		<script>
 
-			CKEDITOR.replace( 'editor6', {
+			CKEDITOR.replace('editor6', {
 				allowedContent: {
 					'b i ul ol big small': true,
 					'h1 h2 h3 p blockquote li': {
 						styles: 'text-align'
 					},
-					a: {attributes: '!href,target'},
+					a: { attributes: '!href,target' },
 					img: {
 						attributes: '!src,alt',
 						styles: 'width,height',
@@ -440,7 +450,7 @@ CKEDITOR.replace( 'editor6', {
 					}
 				},
 				disallowedContent: '*{title*}'
-			} );
+			});
 
 		</script>
 	</div>
@@ -454,11 +464,13 @@ CKEDITOR.replace( 'editor6', {
 		<div class="description">
 			<p>
 				This editor is using a custom configuration for <abbr title="Advanced Content Filter">ACF</abbr>.
-				It's using the <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_disallowed_content.html" rel="noopener noreferrer" target="_blank">
-				Disallowed Content</a> property of the filter to eliminate all <code>a</code> and <code>img</code> tags,
+				It's using the <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_disallowed_content.html"
+					rel="noopener noreferrer" target="_blank">
+					Disallowed Content</a> property of the filter to eliminate all <code>a</code> and <code>img</code>
+				tags,
 				while allowing all other tags.
 			</p>
-<pre class="samples">
+			<pre class="samples">
 CKEDITOR.replace( 'editor7', {
 	allowedContent: {
 		// Allow all content.
@@ -478,7 +490,7 @@ CKEDITOR.replace( 'editor7', {
 		</textarea>
 		<script>
 
-			CKEDITOR.replace( 'editor7', {
+			CKEDITOR.replace('editor7', {
 				allowedContent: {
 					// allow all content
 					$1: {
@@ -489,7 +501,7 @@ CKEDITOR.replace( 'editor7', {
 					}
 				},
 				disallowedContent: 'img a'
-			} );
+			});
 
 		</script>
 	</div>
@@ -497,7 +509,8 @@ CKEDITOR.replace( 'editor7', {
 	<div id="footer">
 		<hr>
 		<p>
-			CKEditor - The text editor for the Internet - <a class="samples" href="https://ckeditor.com/">https://ckeditor.com</a>
+			CKEditor - The text editor for the Internet - <a class="samples"
+				href="https://ckeditor.com/">https://ckeditor.com</a>
 		</p>
 		<p id="copy">
 			Copyright &copy; 2003-2019, <a class="samples" href="https://cksource.com/">CKSource</a> - Frederico
@@ -505,4 +518,5 @@ CKEDITOR.replace( 'editor7', {
 		</p>
 	</div>
 </body>
+
 </html>
