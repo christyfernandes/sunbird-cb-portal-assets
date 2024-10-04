@@ -846,7 +846,9 @@ body input.navigation-b ul li a:hover:hover {
   border-radius: 3px;
   background-clip: padding-box;
   border-bottom: 3px solid #d4d4d4;
+  /* stylelint-disable */
   background: #ebebeb;
+  /* stylelint-enable */
   display: inline-block;
   white-space: nowrap;
   padding: .4em 1.2em .2em;
@@ -1150,7 +1152,9 @@ body input.navigation-b ul li a:hover:hover {
   font-size: 17px;
   text-align: center;
   line-height: 19px;
+  /* stylelint-disable */
   background: #cccccc;
+  /* stylelint-enable */
 }
 
 main .grid-container,

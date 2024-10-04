@@ -1150,7 +1150,9 @@ body input.navigation-b ul li a:hover:hover {
   font-size: 17px;
   text-align: center;
   line-height: 19px;
+    /* stylelint-disable */
   background: #cccccc;
+    /* stylelint-enable */
 }
 
 main .grid-container,
