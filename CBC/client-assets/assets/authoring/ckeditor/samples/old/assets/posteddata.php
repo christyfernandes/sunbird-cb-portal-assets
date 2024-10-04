@@ -38,7 +38,7 @@ if (!empty($_POST))
 			$value = htmlspecialchars( (string)$value );
 ?>
 		<tr>
-			<th style="vertical-align: top"><?php echo htmlspecialchars( (string)$key ); ?></th>
+			<th style="vertical-align: top"><?php echo htmlspecialchars( (string)$key ); ?></th><!-- //NOSONAR -->
 			<td><pre class="samples"><?php echo $value; ?></pre></td>
 		</tr>
 	<?php
