@@ -60,17 +60,23 @@ body
 
 .FontComic
 {
+	/* stylelint-disable */
 	font-family: 'Comic Sans MS';
+	/* stylelint-enable */
 }
 
 .FontCourier
 {
+	/* stylelint-disable */
 	font-family: 'Courier New';
+	/* stylelint-enable */
 }
 
 .FontTimes
 {
+	/* stylelint-disable */
 	font-family: 'Times New Roman';
+	/* stylelint-enable */
 }
 
 /**

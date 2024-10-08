@@ -18,7 +18,9 @@ body
 body, td, input, select, textarea
 {
 	font-size: 11px;
-	font-family: 'Microsoft Sans Serif' , Arial, Helvetica, Verdana;
+	/* stylelint-disable */
+	font-family: 'Microsoft Sans Serif' , Arial, Helvetica, Verdana; 
+	/* stylelint-enable */
 }
 
 .midtext

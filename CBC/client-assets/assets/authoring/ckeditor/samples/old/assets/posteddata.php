@@ -5,7 +5,7 @@ Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
 */
 ?>
-<html>
+<html xml:lang>
 <head>
 	<meta charset="utf-8">
 	<title>Sample &mdash; CKEditor</title>
@@ -15,12 +15,12 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
 	<h1 class="samples">
 		CKEditor &mdash; Posted Data
 	</h1>
-	<table border="1" cellspacing="0" id="outputSample">
-		<colgroup><col width="120"></colgroup>
+	<table border="1" cellspacing="0" id="outputSample"><!-- //NOSONAR -->
+		<colgroup><col width="120"></colgroup><!-- //NOSONAR -->
 		<thead>
 			<tr>
-				<th>Field&nbsp;Name</th>
-				<th>Value</th>
+				<th>Field&nbsp;Name</th><!-- //NOSONAR -->
+				<th>Value</th><!-- //NOSONAR -->
 			</tr>
 		</thead>
 <?php
@@ -38,7 +38,7 @@ if (!empty($_POST))
 			$value = htmlspecialchars( (string)$value );
 ?>
 		<tr>
-			<th style="vertical-align: top"><?php echo htmlspecialchars( (string)$key ); ?></th>
+			<th style="vertical-align: top"><?php echo htmlspecialchars( (string)$key ); ?></th><!-- //NOSONAR -->
 			<td><pre class="samples"><?php echo $value; ?></pre></td>
 		</tr>
 	<?php

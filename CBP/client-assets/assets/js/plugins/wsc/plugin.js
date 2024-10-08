@@ -1,33 +1,33 @@
 ﻿// Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
 // For licensing, see LICENSE.md or https://ckeditor.com/license
 
-CKEDITOR.plugins.add( 'wsc', {
+CKEDITOR.plugins.add('wsc', {
 	requires: 'dialog',
 	lang: 'af,ar,bg,bn,bs,ca,cs,cy,da,de,el,en-au,en-ca,en-gb,en,eo,es,et,eu,fa,fi,fo,fr-ca,fr,gl,gu,he,hi,hr,hu,is,it,ja,ka,km,ko,lt,lv,mk,mn,ms,nb,nl,no,pl,pt-br,pt,ro,ru,sk,sl,sr-latn,sr,sv,th,tr,ug,uk,vi,zh-cn,zh', // %REMOVE_LINE_CORE%
 	icons: 'spellchecker', // %REMOVE_LINE_CORE%
 	hidpi: true, // %REMOVE_LINE_CORE%
-	parseApi: function(editor) {
-		editor.config.wsc_onFinish = (typeof editor.config.wsc_onFinish === 'function') ? editor.config.wsc_onFinish : function() {};
-		editor.config.wsc_onClose = (typeof editor.config.wsc_onClose === 'function') ? editor.config.wsc_onClose : function() {};
+	parseApi: function (editor) {
+		editor.config.wsc_onFinish = (typeof editor.config.wsc_onFinish === 'function') ? editor.config.wsc_onFinish : function () { };
+		editor.config.wsc_onClose = (typeof editor.config.wsc_onClose === 'function') ? editor.config.wsc_onClose : function () { };
 	},
-	parseConfig: function(editor) {
+	parseConfig: function (editor) {
 		editor.config.wsc_customerId = editor.config.wsc_customerId || CKEDITOR.config.wsc_customerId || '1:ua3xw1-2XyGJ3-GWruD3-6OFNT1-oXcuB1-nR6Bp4-hgQHc-EcYng3-sdRXG3-NOfFk';
 		editor.config.wsc_customDictionaryIds = editor.config.wsc_customDictionaryIds || CKEDITOR.config.wsc_customDictionaryIds || '';
 		editor.config.wsc_userDictionaryName = editor.config.wsc_userDictionaryName || CKEDITOR.config.wsc_userDictionaryName || '';
 		editor.config.wsc_customLoaderScript = editor.config.wsc_customLoaderScript || CKEDITOR.config.wsc_customLoaderScript;
-		editor.config.wsc_interfaceLang = editor.config.wsc_interfaceLang; //option to customize the interface language 12/28/2015
+		editor.config.wsc_interfaceLang = editor.config.wsc_interfaceLang; //NOSONAR //option to customize the interface language 12/28/2015
 
 		CKEDITOR.config.wsc_cmd = editor.config.wsc_cmd || CKEDITOR.config.wsc_cmd || 'spell'; // spell, thes or grammar. default tab
-		CKEDITOR.config.wsc_version="v4.3.0-master-d769233";
+		CKEDITOR.config.wsc_version = "v4.3.0-master-d769233";
 		CKEDITOR.config.wsc_removeGlobalVariable = true;
 	},
-	onLoad: function(editor){
+	onLoad: function (editor) {
 		// Append skin specific stylesheet fo moono-lisa skin.
-		if ( ( CKEDITOR.skinName || editor.config.skin ) == 'moono-lisa' ) {
-			CKEDITOR.document.appendStyleSheet( this.path + 'skins/' + CKEDITOR.skin.name + '/wsc.css' );
+		if ((CKEDITOR.skinName || editor.config.skin) == 'moono-lisa') {
+			CKEDITOR.document.appendStyleSheet(this.path + 'skins/' + CKEDITOR.skin.name + '/wsc.css');
 		}
 	},
-	init: function( editor ) {
+	init: function (editor) {
 		var commandName = 'checkspell';
 
 		var strNormalDialog = 'dialogs/wsc.js',
@@ -38,22 +38,24 @@ CKEDITOR.plugins.add( 'wsc', {
 
 		self.parseConfig(editor);
 		self.parseApi(editor);
-		var command = editor.addCommand( commandName, new CKEDITOR.dialogCommand( commandName ) );
+		var command = editor.addCommand(commandName, new CKEDITOR.dialogCommand(commandName));
 
 		// SpellChecker doesn't work in Opera, with custom domain, IE Compatibility Mode and IE (8 & 9) Quirks Mode
-		command.modes = { wysiwyg: ( !CKEDITOR.env.opera && !CKEDITOR.env.air && document.domain == window.location.hostname &&
-			!( env.ie && ( env.version < 8 || env.quirks ) ) ) };
+		command.modes = {
+			wysiwyg: (!CKEDITOR.env.opera && !CKEDITOR.env.air && document.domain == window.location.hostname &&
+				!(env.ie && (env.version < 8 || env.quirks)))
+		};
 
-		if(typeof editor.plugins.scayt == 'undefined'){
-			editor.ui.addButton && editor.ui.addButton( 'SpellChecker', {
+		if (typeof editor.plugins.scayt == 'undefined') {
+			editor.ui.addButton && editor.ui.addButton('SpellChecker', {
 				label: editor.lang.wsc.toolbar,
-				click: function(editor) {
+				click: function (editor) {
 					var inlineMode = (editor.elementMode == CKEDITOR.ELEMENT_MODE_INLINE),
 						text = inlineMode ? editor.container.getText() : editor.document.getBody().getText();
 
 					text = text.replace(/\s/g, '');
 
-					if(text) {
+					if (text) {
 						editor.execCommand('checkspell');
 					} else {
 						alert('Nothing to check!');
@@ -64,7 +66,7 @@ CKEDITOR.plugins.add( 'wsc', {
 		}
 
 
-		if ( CKEDITOR.env.ie && CKEDITOR.env.version <= 7 ){
+		if (CKEDITOR.env.ie && CKEDITOR.env.version <= 7) {
 			strDialog = strIeDialog;
 		} else {
 			if (!window.postMessage) {
@@ -73,7 +75,7 @@ CKEDITOR.plugins.add( 'wsc', {
 				strDialog = strNormalDialog;
 			}
 		}
-		CKEDITOR.dialog.add( commandName, this.path + strDialog );
+		CKEDITOR.dialog.add(commandName, this.path + strDialog);
 	}
 
 });

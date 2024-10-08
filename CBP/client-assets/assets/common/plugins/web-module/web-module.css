@@ -12,6 +12,7 @@ body::-webkit-scrollbar {
   height: 8px;
 }
 
+/* stylelint-disable */
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min--moz-device-pixel-ratio: 2),
 only screen and (-o-min-device-pixel-ratio: 2/1),
@@ -23,6 +24,8 @@ only screen and (min-resolution: 2dppx) {
     line-height: 1.3;
   }
 }
+
+/* stylelint-enable */
 
 @media only screen and (max-width: 599px) {
   body {

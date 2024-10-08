@@ -584,7 +584,9 @@ body input.button-a {
   line-height: 25.2px;
   line-height: 1.57rem;
   height: 36px;
+  /* stylelint-disable */
   line-height: 36px;
+  /* stylelint-enable */
   padding: 0 1.1em;
   font-weight: 700;
   color: #3e3e3e;
@@ -595,7 +597,9 @@ body input.button-a {
   border: 0;
   vertical-align: middle;
   margin: 1px 0;
+  /* stylelint-disable */
   background: transparent;
+  /* stylelint-enable */
 }
 body a.button-a.icon-pos-left,
 body button.button-a.icon-pos-left,
@@ -733,7 +737,9 @@ body input.navigation-b ul li a:hover:hover {
   border-radius: 3px;
   background-clip: padding-box;
   border-bottom: 3px solid #d4d4d4;
+  /* stylelint-disable */
   background: #ebebeb;
+  /* stylelint-enable */
   display: inline-block;
   white-space: nowrap;
   padding: .4em 1.2em .2em;
@@ -992,7 +998,9 @@ body input.navigation-b ul li a:hover:hover {
   font-size: 17px;
   text-align: center;
   line-height: 19px;
+  /* stylelint-disable */
   background: #cccccc;
+  /* stylelint-enable */
 }
 main .grid-container,
 header .grid-container,

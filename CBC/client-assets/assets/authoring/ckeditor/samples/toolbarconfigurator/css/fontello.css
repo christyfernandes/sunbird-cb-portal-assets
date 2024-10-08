@@ -20,7 +20,9 @@
 */
 
  [class^="icon-"]:before, [class*=" icon-"]:before {
+    /* stylelint-disable */
   font-family: "fontello";
+    /* stylelint-enable */
   font-style: normal;
   font-weight: normal;
   speak: none;

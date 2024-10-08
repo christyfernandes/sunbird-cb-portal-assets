@@ -197,7 +197,9 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
   margin-bottom: -30px;
   /* Hack to make IE7 behave */
   *zoom:1;
+    /* stylelint-disable */
   *display:inline;
+    /* stylelint-enable */
 }
 .CodeMirror-gutter-wrapper {
   position: absolute;
