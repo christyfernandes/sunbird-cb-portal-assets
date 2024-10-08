@@ -31,5 +31,25 @@
     "publishingMsg": "Designation is being published now.",
     "internalErrorMsg": "An internal error occurred. Please try again later.",
     "successMsg": "Imported Successfully",
-    "termRemoveMsg": "Deleted Successfully"
+    "termRemoveMsg": "Deleted Successfully",
+    "bulkUploadConfig": {
+    "mainHeading": "Bulk Upload Designations",
+    "sampleFileDownloadInstructuons": {
+      "title": "Follow these steps to upload multiple designations:",
+      "instructions": [
+        "Download the Sample File.",
+        "Fill in the details in the Sample File.",
+        "Verify via OTP.",
+        "Upload the populated sample csv file.",
+        "Check the upload results for confirmation."
+      ]
+    },
+    "sampleFileDownloadText": "Download Sample File",
+    "maxFileSizeText": "Max file size: 100 MB",
+    "supportedFileTypeText": "Supported file types: xlsx",
+    "supportedFileTypeText2": "Upload xlsx format file only",
+    "noFileUploaded": "No File Uploaded",
+    "pageSize": 10,
+    "pageSizeOptions": [10, 20]
+  }
 }

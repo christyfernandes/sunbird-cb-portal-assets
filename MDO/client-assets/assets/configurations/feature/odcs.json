@@ -290,5 +290,25 @@
                 }
             ]
         }
-    ]
+    ],
+    "bulkUploadConfig": {
+    "mainHeading": "Bulk Upload Competency Designation",
+    "sampleFileDownloadInstructuons": {
+      "title": "Follow these steps to upload multiple competency designations:",
+      "instructions": [
+        "Download the Sample File.",
+        "Fill in competency details in the Sample File.",
+        "Verify via OTP.",
+        "Upload the populated sample csv file.",
+        "Check the upload results for confirmation."
+      ]
+    },
+    "sampleFileDownloadText": "Download Sample File",
+    "maxFileSizeText": "Max file size: 100 MB",
+    "supportedFileTypeText": "Supported file types: xlsx",
+    "supportedFileTypeText2": "Upload xlsx format file only",
+    "noFileUploaded": "No File Uploaded",
+    "pageSize": 10,
+    "pageSizeOptions": [10, 20]
+  }
 }
