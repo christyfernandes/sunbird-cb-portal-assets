@@ -109,5 +109,23 @@
           }
         }
       ]
-    } 
+    },
+    "karmaPoints": [
+    {
+      "displayButton": "Complete",
+      "textBeforeIcon": "earn",
+      "points": "10",
+      "textAfterPoints": "karmaPoints",
+      "textAfterIcon": "byCompletingEvent",
+      "toolTipText": "eventCompleteTipEvent"
+    },
+    {
+      "displayButton": "completed",
+      "textBeforeIcon": "earn",
+      "points": "10",
+      "textAfterPoints": "karmaPoints",
+      "textAfterIcon": "completeBeforeTextEvent",
+      "toolTipText": ""
+    }
+  ]
 }
