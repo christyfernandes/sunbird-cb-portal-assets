@@ -2583,7 +2583,7 @@
       "strips": [
         {
           "active": true,
-          "key": "todaysevents",
+          "key": "liveEvents",
           "logo": "school",
           "title": "Live events",
           "stripTitleLink": {
@@ -2593,7 +2593,7 @@
           "sliderConfig": {
             "showNavs": true,
             "showDots": false,
-            "maxWidgets": 12
+            "maxWidgets": 30
           },
           "loader": true,
           "loaderConfig": {
