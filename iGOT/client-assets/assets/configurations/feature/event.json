@@ -209,7 +209,7 @@
         "isFirstComment": true,
         "commentTreeId": "",
         "hierarchyPath": [],
-        "entityType": "igot",
+        "entityType": "EVENT",
         "entityId": "do_11407955440633446419",
         "workflow": "TOC"
       },
@@ -254,7 +254,7 @@
             "isFirstComment": false,
             "commentTreeId": "",
             "hierarchyPath": [],
-            "entityType": "igot",
+            "entityType": "EVENT",
             "entityId": "do_11407955440633446419",
             "workflow": "TOC"
           },
