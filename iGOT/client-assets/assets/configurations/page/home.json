@@ -2578,6 +2578,80 @@
     },
     {
       "order": 1,
+      "stripType": "oldPills",
+      "stripVisable": "responsive",
+      "strips": [
+        {
+          "active": true,
+          "key": "liveevents",
+          "logo": "school",
+          "title": "Live events",
+          "stripTitleLink": {
+            "link": "",
+            "icon": ""
+          },
+          "sliderConfig": {
+            "showNavs": true,
+            "showDots": false,
+            "maxWidgets": 12
+          },
+          "loader": true,
+          "loaderConfig": {
+            "cardSubType": "card-events-skeleton"
+          },
+          "stripBackground": "",
+          "titleDescription": "Today's events",
+          "stripConfig": {
+            "cardSubType": "card-events"
+          },
+          "tabs": [],
+          "filters": [],
+          "data": [],
+          "request": {
+            "searchV6": {
+              "request": {
+                "filters": {
+                  "status": [
+                    "Live"
+                  ],
+                  "contentType": "Event"
+                },
+                "query": "",
+                "sort_by": {
+                  "startDate": "desc"
+                },
+                "fields": [
+                  "name",
+                  "instructions",
+                  "description",
+                  "mimeType",
+                  "identifier",
+                  "resourceType",
+                  "contentType",
+                  "channel",
+                  "organisation",
+                  "duration",
+                  "version",
+                  "startDate",
+                  "endDate",
+                  "startTime",
+                  "endTime",
+                  "status",
+                  "createdOn",
+                  "eventType",
+                  "expiryDate",
+                  "creatorDetails",
+                  "appIcon",
+                  "recordedLinks"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "order": 1,
       "stripType": "withPils",
       "stripVisable": "responsive",
       "strips": [
