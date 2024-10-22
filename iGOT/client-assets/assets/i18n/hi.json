@@ -951,7 +951,8 @@
     "eventType": "ईवेंट का प्रकार",
     "hostedBy": "के द्वारा होस्ट किया गया",
     "enroll": "नामांकन करें।",
-    "noBatchErrormsg":"कोई बैच उपलब्ध नहीं है!"
+    "noBatchErrormsg":"कोई बैच उपलब्ध नहीं है!",
+    "certificateInfo":"आपको अपना सर्टिफिकेट 1 सप्ताह के अंदर में प्राप्त हो जाएगा।"
   },
   "eventPresentorsCard": {
     "host": "होस्ट"
