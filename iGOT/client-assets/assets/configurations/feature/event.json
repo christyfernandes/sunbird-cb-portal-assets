@@ -202,6 +202,209 @@
     }
   ],
   "discussWidgetData": {
+    "eventsCategoryId": 1,
+    "banner": {
+        "widgetType": "slider",
+        "widgetSubType": "sliderBanners",
+        "style": {
+            "border-radius": "12px"
+        },
+        "widgetData": [
+            {
+                "banners": {
+                    "l": "assets/instances/eagle/banners/hubs/events/l.png",
+                    "m": "assets/instances/eagle/banners/hubs/events/m.png",
+                    "s": "assets/instances/eagle/banners/hubs/events/s.png",
+                    "xl": "assets/instances/eagle/banners/hubs/events/xl.png",
+                    "xs": "assets/instances/eagle/banners/hubs/events/xs.png",
+                    "xxl": "assets/instances/eagle/banners/hubs/events/xxl.png"
+                }
+            }
+        ]
+    },
+    "pageLayout": {
+        "widgetSubType": "gridLayout",
+        "widgetType": "layout",
+        "widgetData": {
+          "widgets": [
+            [
+                {
+                  "dimensions": {},
+                  "className": "",
+                  "widget": {
+                    "widgetType": "card",
+                    "widgetSubType": "cardHomeNotify",
+                    "widgetData": {}
+                  }
+                }
+            ]
+          ]
+        }
+    },
+    "eventStrips": {
+      "order": 1,
+      "strips": [
+        {
+          "active": true,
+          "key": "liveEvents",
+          "logo": "school",
+          "title": "Live Events",
+          "stripTitleLink": {
+            "link": "",
+            "icon": ""
+          },
+          "sliderConfig": {
+            "showNavs": true,
+            "showDots": false,
+            "maxWidgets": 30
+          },
+          "loader": true,
+          "loaderConfig": {
+            "cardSubType": "card-events-skeleton"
+          },
+          "stripBackground": "",
+          "titleDescription": "Today's events",
+          "stripConfig": {
+            "cardSubType": "card-events"
+          },
+          "tabs": [],
+          "filters": [],
+          "data": [],
+          "request": {
+            "searchV6": {
+              "request": {
+                "filters": {
+                  "status": [
+                    "Live"
+                  ],
+                  "contentType": "Event"
+                },
+                "query": "",
+                "sort_by": {
+                  "startDate": "desc"
+                },
+                "fields": [
+                  "name",
+                  "instructions",
+                  "description",
+                  "mimeType",
+                  "identifier",
+                  "resourceType",
+                  "contentType",
+                  "channel",
+                  "organisation",
+                  "duration",
+                  "version",
+                  "startDate",
+                  "endDate",
+                  "startTime",
+                  "endTime",
+                  "status",
+                  "createdOn",
+                  "eventType",
+                  "expiryDate",
+                  "creatorDetails",
+                  "appIcon",
+                  "recordedLinks"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+ 
+    "todaysEventStrips": {
+      "order": 1,
+      "strips": [
+        {
+          "active": true,
+          "key": "todaysevents",
+          "logo": "school",
+          "title": "Today's events",
+          "stripTitleLink": {
+            "link": "",
+            "icon": ""
+          },
+          "sliderConfig": {
+            "showNavs": true,
+            "showDots": false,
+            "maxWidgets": 30
+          },
+          "loader": true,
+          "loaderConfig": {
+            "cardSubType": "card-events-skeleton"
+          },
+          "stripBackground": "",
+          "titleDescription": "Today's events",
+          "stripConfig": {
+            "cardSubType": "card-events"
+          },
+          "tabs": [],
+          "filters": [],
+          "data": [],
+          "request": {
+            "searchV6": {
+              "request": {
+                "filters": {
+                  "status": [
+                    "Live"
+                  ],
+                  "contentType": "Event"
+                },
+                "query": "",
+                "sort_by": {
+                  "startDate": "desc"
+                },
+                "fields": [
+                  "name",
+                  "instructions",
+                  "description",
+                  "mimeType",
+                  "identifier",
+                  "resourceType",
+                  "contentType",
+                  "channel",
+                  "organisation",
+                  "duration",
+                  "version",
+                  "startDate",
+                  "endDate",
+                  "startTime",
+                  "endTime",
+                  "status",
+                  "createdOn",
+                  "eventType",
+                  "expiryDate",
+                  "creatorDetails",
+                  "appIcon",
+                  "recordedLinks"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "karmaPoints": [
+    {
+      "displayButton": "Complete",
+      "textBeforeIcon": "earn",
+      "points": "10",
+      "textAfterPoints": "karmaPoints",
+      "textAfterIcon": "byCompletingEvent",
+      "toolTipText": "eventCompleteTipEvent"
+    },
+    {
+      "displayButton": "completed",
+      "textBeforeIcon": "",
+      "points": "",
+      "textAfterPoints": "karmaPoints",
+      "textAfterIcon": "completeBeforeTextEvent",
+      "toolTipText": ""
+    }
+  ],
+  "discussWidgetData": {
     "newCommentSection": {
       "show": true,
       "showTopInfo": false,
@@ -221,7 +424,8 @@
         "show": true,
         "size": "ml",
         "photoUrl": "https://portal.dev.karmayogibharat.net/assets/public/profileImage/1725443303744_images.jpeg",
-        "name": "Christopher Fernandes"
+        "name": "Christopher Fernandes",
+        "color": "#006400"
       },
       "commentBox": {
         "placeholder": "Ask a question or post a comment"
@@ -243,6 +447,13 @@
           "show": true,
           "showCount": true,
           "icon": "comment"
+        },
+        "avatarPhoto": {
+          "show": true,
+          "size": "ml",
+          "photoUrl": "https://portal.dev.karmayogibharat.net/assets/public/profileImage/1725443303744_images.jpeg",
+          "name": "Christopher Fernandes",
+          "color": "#006400"
         }
       },
       "repliesSection": {
@@ -266,7 +477,8 @@
             "show": true,
             "size": "ml",
             "photoUrl": "https://portal.dev.karmayogibharat.net/assets/public/profileImage/1725443303744_images.jpeg",
-            "name": "Christopher Fernandes"
+            "name": "Christopher Fernandes",
+            "color": "#006400"
           },
           "commentBox": {
             "placeholder": "post a reply"
@@ -295,4 +507,5 @@
       }
     }
   }
+}
 }
