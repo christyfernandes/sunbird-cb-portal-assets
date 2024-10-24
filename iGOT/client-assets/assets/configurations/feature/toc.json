@@ -343,7 +343,7 @@
         "isFirstComment": true,
         "commentTreeId": "",
         "hierarchyPath": [],
-        "entityType": "igot",
+        "entityType": "COURSE",
         "entityId": "do_11407955440633446419",
         "workflow": "TOC"
       },
@@ -355,7 +355,8 @@
         "show": true,
         "size": "ml",
         "photoUrl": "https://portal.dev.karmayogibharat.net/assets/public/profileImage/1725443303744_images.jpeg",
-        "name": "Christopher Fernandes"
+        "name": "Christopher Fernandes",
+        "color": "#006400"
       },
       "commentBox": {
         "placeholder": "Ask a question or post a comment"
@@ -388,7 +389,7 @@
             "isFirstComment": false,
             "commentTreeId": "",
             "hierarchyPath": [],
-            "entityType": "igot",
+            "entityType": "COURSE",
             "entityId": "do_11407955440633446419",
             "workflow": "TOC"
           },
@@ -400,7 +401,8 @@
             "show": true,
             "size": "ml",
             "photoUrl": "https://portal.dev.karmayogibharat.net/assets/public/profileImage/1725443303744_images.jpeg",
-            "name": "Christopher Fernandes"
+            "name": "Christopher Fernandes",
+            "color": "#006400"
           },
           "commentBox": {
             "placeholder": "post a reply"
