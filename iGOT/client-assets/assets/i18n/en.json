@@ -952,7 +952,8 @@
         "eventType": "Event Type",
         "hostedBy": "Hosted By",
         "enroll": "Enroll",
-        "noBatchErrormsg": "No batches available!"
+        "noBatchErrormsg": "No batches available!",
+        "certificateInfo":"Your Certificate will be generated within 1 week."
     },
     "eventPresentorsCard": {
         "host": "Host"
